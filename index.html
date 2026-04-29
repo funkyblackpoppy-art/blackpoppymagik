@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Poppy Magik & Apothecary · Ancestral Craft · Animal Soul Readings</title>
+<meta name="description" content="Handcrafted animal soul readings, ancestral apothecary, digital grimoires by Rachael Nike — third-generation witch. Black Poppy Magik & Apothecary.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void:       #f3f1ec;
+  --deep:       #d9d4cc;
+  --card:       #f8f6f2;
+  --card2:      #efebe4;
+  --sage:       #b7b3a8;
+  --sage-hi:    #c9c4b8;
+  --sage-lo:    #f6f3ed;
+  --white:      #fcfaf7;
+  --off-white:  #f4f0ea;
+  --paper:      #ece7de;
+  --paper2:     #ddd6ca;
+  --ink:        #2f2a26;
+  --ink2:       #4a443e;
+  --ink3:       #6b645d;
+  --ink4:       #8a8278;
+  --green:      #8f9b8f;
+  --green-hi:   #aab3aa;
+  --green-lo:   rgba(143,155,143,0.08);
+  --green-mid:  rgba(143,155,143,0.18);
+  --purple:     #9b8fa8;
+  --purple-hi:  #b3a8bf;
+  --purple-lo:  rgba(155,143,168,0.08);
+  --purple-mid: rgba(155,143,168,0.18);
+  --purple-deep:#5c3d7a;
+  --teal:       #8da39b;
+  --teal-lo:    rgba(141,163,155,0.08);
+  --rose:       #b58f8f;
+  --rose-lo:    rgba(181,143,143,0.08);
+  --gold:       #b8a98c;
+  --border:     rgba(47,42,38,0.08);
+  --border2:    rgba(47,42,38,0.14);
+  --shadow:     0 2px 12px rgba(0,0,0,0.04);
+  --shadow2:    0 6px 24px rgba(0,0,0,0.06);
+  --playfair:   'Playfair Display', serif;
+  --cinzel:     'Cinzel', serif;
+  --jost:       'Jost', sans-serif;
+  --radius:     12px;
+  --radius-sm:  8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--jost);
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(180,170,150,0.06) 0%, transparent 70%);
+}
+
+/* ── BOTANICAL FRAME ── */
+.botanical-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 500;
+  background: rgba(243,241,236,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 800px; margin: 0 auto; padding: 0 40px;
+  height: 56px; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
+.nav-logo-main { font-family: var(--cinzel); font-size: 13px; font-weight: 600; letter-spacing: .12em; color: var(--ink); line-height: 1; }
+.nav-logo-sub { font-family: var(--playfair); font-style: italic; font-size: 10px; color: var(--ink4); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-family: var(--cinzel); font-size: 8px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--ink4); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--purple); }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-eleven { font-family: var(--cinzel); font-size: 9px; letter-spacing: .3em; color: var(--purple-hi); opacity: .4; }
+.nav-cart { font-family: var(--cinzel); font-size: 8px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink4); border: 1.5px solid var(--border2); border-radius: var(--radius-sm); padding: 6px 14px; text-decoration: none; transition: all .2s; }
+.nav-cart:hover { border-color: var(--purple); color: var(--purple); }
+
+/* ── PAGE CONTAINER ── */
+.page { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 40px 80px; }
+
+/* ── HERO ── */
+.hd { text-align: center; padding: 64px 0 48px; position: relative; }
+.hd::before { content: '✦ ✦ ✦'; display: block; font-size: 10px; letter-spacing: .5em; color: var(--purple-hi); opacity: .5; margin-bottom: 20px; }
+.hd-super { font-family: var(--cinzel); font-size: 11px; font-weight: 500; letter-spacing: .35em; text-transform: uppercase; color: var(--purple); margin-bottom: 16px; display: block; }
+.hd-title { font-family: var(--cinzel); font-size: clamp(36px, 7vw, 56px); font-weight: 600; letter-spacing: .08em; color: var(--ink); line-height: 1.05; margin-bottom: 6px; }
+.hd-title2 { font-family: var(--playfair); font-size: clamp(18px, 3.5vw, 26px); font-style: italic; font-weight: 400; color: var(--purple); letter-spacing: .04em; margin-bottom: 18px; }
+.hd-sub { font-family: var(--cinzel); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink4); margin-bottom: 28px; display: block; }
+.hd-tagline { font-family: var(--playfair); font-size: 15px; font-style: italic; color: var(--ink3); line-height: 1.7; }
+.hd-rule { display: flex; align-items: center; gap: 16px; margin: 28px auto 0; max-width: 320px; }
+.hd-rule::before, .hd-rule::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--border2)); }
+.hd-rule::after { background: linear-gradient(to left, transparent, var(--border2)); }
+.hd-rule span { font-size: 14px; color: var(--purple-hi); opacity: .6; }
+
+.hero-ctas { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+
+/* ── BUTTONS ── */
+.btn-primary { font-family: var(--cinzel); font-size: 10px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; padding: 14px 36px; border-radius: var(--radius-sm); background: var(--ink); color: var(--white); border: none; cursor: pointer; text-decoration: none; transition: all .25s; display: inline-block; box-shadow: var(--shadow); }
+.btn-primary:hover { background: var(--purple-deep); transform: translateY(-1px); box-shadow: var(--shadow2); }
+.btn-ghost { font-family: var(--cinzel); font-size: 10px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; padding: 13px 32px; border-radius: var(--radius-sm); background: transparent; color: var(--ink3); border: 1.5px solid var(--border2); cursor: pointer; text-decoration: none; transition: all .25s; display: inline-block; }
+.btn-ghost:hover { border-color: var(--purple); color: var(--purple); transform: translateY(-1px); }
+
+/* ── CARDS (intake form style) ── */
+.card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; margin-bottom: 16px; box-shadow: var(--shadow2); animation: up .38s ease both; }
+@keyframes up { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+.ch { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid var(--border); text-align: center; }
+.ch-step { font-family: var(--cinzel); font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: var(--purple-hi); margin-bottom: 10px; display: block; }
+.ch-title { font-family: var(--cinzel); font-size: 22px; font-weight: 500; color: var(--ink); letter-spacing: .06em; margin-bottom: 8px; }
+.ch-desc { font-family: var(--playfair); font-style: italic; font-size: 14px; color: var(--ink3); line-height: 1.7; }
+
+/* ── ABOUT CARD ── */
+.about-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 32px; align-items: start; }
+.about-portrait { border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px; background: var(--card); box-shadow: var(--shadow); }
+.about-portrait img { width: 100%; border-radius: 6px; display: block; }
+.about-portrait-placeholder { aspect-ratio: 3/4; background: var(--paper); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--playfair); font-style: italic; font-size: 13px; color: var(--ink4); text-align: center; padding: 20px; line-height: 1.7; }
+.about-caption { text-align: center; margin-top: 8px; font-family: var(--cinzel); font-size: 8px; letter-spacing: .2em; color: var(--ink4); text-transform: uppercase; }
+.about-origin { font-family: var(--playfair); font-style: italic; font-size: 16px; color: var(--purple-deep); line-height: 1.7; border-left: 2px solid var(--purple-mid); padding-left: 16px; margin: 20px 0; }
+.about-body p { font-family: var(--playfair); font-size: 14px; color: var(--ink3); line-height: 1.9; margin-bottom: 12px; }
+.about-sig { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border); }
+.about-sig-name { font-family: var(--cinzel); font-size: 15px; font-weight: 500; letter-spacing: .1em; color: var(--ink); margin-bottom: 3px; }
+.about-sig-title { font-family: var(--jost); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink4); line-height: 1.8; }
+
+/* ── READING CARDS ── */
+.readings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rcard { border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 18px 16px; text-decoration: none; transition: all .22s; background: var(--off-white); position: relative; overflow: hidden; display: block; }
+.rcard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--purple-mid); opacity: 0; transition: opacity .2s; }
+.rcard:hover { border-color: var(--purple); background: var(--purple-lo); box-shadow: 0 4px 16px rgba(92,61,158,.12); }
+.rcard:hover::before { opacity: 1; }
+.rcard.seasonal { border-color: rgba(181,143,143,0.25); }
+.rcard-badge { display: inline-block; font-family: var(--cinzel); font-size: 7px; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); border: 1px solid rgba(181,143,143,0.30); border-radius: 99px; padding: 2px 8px; margin-bottom: 8px; }
+.rcard-price { display: block; font-family: var(--cinzel); font-size: 26px; font-weight: 600; color: var(--purple); line-height: 1; margin-bottom: 6px; }
+.rcard-name { display: block; font-family: var(--jost); font-size: 12px; font-weight: 500; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+.rcard-desc { display: block; font-family: var(--playfair); font-style: italic; font-size: 12px; color: var(--ink3); line-height: 1.55; margin-bottom: 12px; }
+.rcard-cta { font-family: var(--cinzel); font-size: 8px; letter-spacing: .16em; text-transform: uppercase; color: var(--purple); display: flex; align-items: center; gap: 6px; transition: gap .2s; }
+.rcard:hover .rcard-cta { gap: 10px; }
+
+/* ── CATEGORIES ── */
+.cat-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+.cat-card { background: var(--off-white); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 20px 12px; text-align: center; text-decoration: none; transition: all .22s; display: block; }
+.cat-card:hover { border-color: var(--purple-mid); background: var(--purple-lo); }
+.cat-card.dimmed { opacity: .55; cursor: default; }
+.cat-icon { font-size: 22px; display: block; margin-bottom: 10px; }
+.cat-name { font-family: var(--cinzel); font-size: 8px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; display: block; }
+.cat-desc { font-family: var(--playfair); font-style: italic; font-size: 10px; color: var(--ink4); line-height: 1.5; }
+
+/* ── TRUST ── */
+.trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; text-align: center; margin: 16px 0; }
+.trust-icon { font-size: 18px; display: block; margin-bottom: 8px; opacity: .6; }
+.trust-label { font-family: var(--cinzel); font-size: 8px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; display: block; }
+.trust-desc { font-family: var(--playfair); font-style: italic; font-size: 11px; color: var(--ink4); line-height: 1.5; }
+
+/* ── CONTACT ── */
+.contact-fields { display: flex; flex-direction: column; gap: 10px; }
+.contact-input { background: var(--white); border: 1.5px solid var(--border2); border-radius: var(--radius-sm); padding: 11px 16px; font-family: var(--jost); font-size: 14px; font-weight: 300; color: var(--ink); outline: none; transition: border-color .25s; width: 100%; }
+.contact-input:focus { border-color: var(--purple); }
+.contact-input::placeholder { color: var(--sage); }
+.contact-textarea { background: var(--white); border: 1.5px solid var(--border2); border-radius: var(--radius-sm); padding: 11px 16px; font-family: var(--jost); font-size: 14px; font-weight: 300; color: var(--ink); outline: none; transition: border-color .25s; resize: vertical; width: 100%; }
+.contact-textarea:focus { border-color: var(--purple); }
+.contact-textarea::placeholder { color: var(--sage); }
+
+/* ── NEWSLETTER ── */
+.newsletter-form { display: flex; gap: 8px; }
+.newsletter-input { flex: 1; background: var(--white); border: 1.5px solid var(--border2); border-radius: var(--radius-sm); padding: 11px 16px; font-family: var(--jost); font-size: 14px; font-weight: 300; color: var(--ink); outline: none; }
+.newsletter-input:focus { border-color: var(--purple); }
+.newsletter-input::placeholder { color: var(--sage); }
+.newsletter-btn { font-family: var(--cinzel); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; padding: 11px 20px; border-radius: var(--radius-sm); background: var(--ink); color: var(--white); border: none; cursor: pointer; white-space: nowrap; }
+.newsletter-btn:hover { background: var(--purple-deep); }
+
+/* ── FOOTER ── */
+.footer { background: var(--ink); padding: 48px 0 28px; margin-top: 0; }
+.footer-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-brand { font-family: var(--cinzel); font-size: 13px; font-weight: 600; letter-spacing: .12em; color: rgba(243,241,236,0.85); margin-bottom: 4px; display: block; }
+.footer-brand-sub { font-family: var(--playfair); font-style: italic; font-size: 11px; color: rgba(243,241,236,0.30); margin-bottom: 14px; display: block; }
+.footer-desc { font-family: var(--playfair); font-style: italic; font-size: 11px; color: rgba(243,241,236,0.30); line-height: 1.8; margin-bottom: 14px; }
+.footer-tagline { font-family: var(--cinzel); font-size: 8px; letter-spacing: .2em; color: var(--purple-hi); opacity: .4; }
+.footer-col-title { font-family: var(--cinzel); font-size: 7px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: rgba(243,241,236,0.4); margin-bottom: 12px; display: block; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.footer-links a { font-family: var(--playfair); font-style: italic; font-size: 11px; color: rgba(243,241,236,0.28); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: rgba(243,241,236,0.6); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; }
+.footer-copy { font-family: var(--playfair); font-style: italic; font-size: 10px; color: rgba(243,241,236,0.18); }
+.footer-eleven { font-family: var(--cinzel); font-size: 10px; letter-spacing: .4em; color: var(--purple-hi); opacity: .22; }
+
+/* ── MARQUEE ── */
+.marquee-wrap { background: var(--ink); padding: 10px 0; overflow: hidden; }
+.marquee-track { display: flex; animation: marquee 32s linear infinite; white-space: nowrap; }
+.marquee-item { font-family: var(--cinzel); font-size: 8px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,241,236,0.25); padding: 0 32px; flex-shrink: 0; }
+.marquee-dot { color: rgba(155,143,168,0.25); padding: 0 4px; font-size: 8px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── DIVIDERS ── */
+.section-divider { display: flex; align-items: center; gap: 16px; margin: 48px auto; max-width: 320px; }
+.section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--border2)); }
+.section-divider::after { background: linear-gradient(to left, transparent, var(--border2)); }
+.section-divider span { font-size: 12px; color: var(--purple-hi); opacity: .5; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-eleven { display: none; }
+  .cat-grid { grid-template-columns: repeat(2,1fr); }
+  .trust-grid { grid-template-columns: repeat(2,1fr); }
+  .about-layout { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 480px) {
+  .page { padding: 0 20px 60px; }
+  .nav-inner { padding: 0 20px; }
+  .readings-grid { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+  .hero-ctas { flex-direction: column; align-items: stretch; text-align: center; }
+  .newsletter-form { flex-direction: column; }
+  .footer-inner { padding: 0 20px; }
+  .card { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- BOTANICAL FRAME -->
+<svg class="botanical-frame" viewBox="0 0 960 1200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="24" y="24" width="912" height="1152" fill="none" stroke="#2f2a26" stroke-width="1" opacity="0.18"/>
+  <rect x="28" y="28" width="904" height="1144" fill="none" stroke="#2f2a26" stroke-width="0.4" opacity="0.1"/>
+  <line x1="24" y1="24" x2="44" y2="24" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="24" y1="24" x2="24" y2="44" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="936" y1="24" x2="916" y2="24" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="936" y1="24" x2="936" y2="44" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="24" y1="1176" x2="44" y2="1176" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="24" y1="1176" x2="24" y2="1156" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="936" y1="1176" x2="916" y2="1176" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <line x1="936" y1="1176" x2="936" y2="1156" stroke="#2f2a26" stroke-width="1" opacity="0.3"/>
+  <circle cx="24" cy="24" r="2" fill="#2f2a26" opacity="0.2"/>
+  <circle cx="936" cy="24" r="2" fill="#2f2a26" opacity="0.2"/>
+  <circle cx="24" cy="1176" r="2" fill="#2f2a26" opacity="0.2"/>
+  <circle cx="936" cy="1176" r="2" fill="#2f2a26" opacity="0.2"/>
+  <g transform="translate(38, 30)" opacity="0.55"><path d="M30 200 Q28 160 32 120 Q30 80 28 50" stroke="#2f2a26" stroke-width="1.2" fill="none"/><path d="M30 130 Q20 120 18 108" stroke="#2f2a26" stroke-width="0.9" fill="none"/><ellipse cx="17" cy="105" rx="5" ry="8" fill="none" stroke="#2f2a26" stroke-width="0.9" transform="rotate(-15,17,105)"/><path d="M30 155 Q12 148 8 138 Q14 142 30 148" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M30 145 Q46 136 50 126 Q44 132 30 138" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M28 50 Q12 30 20 10 Q28 0 36 10 Q44 30 28 50Z" fill="none" stroke="#2f2a26" stroke-width="1"/><path d="M28 50 Q8 40 10 20 Q18 10 28 18" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M28 50 Q48 40 46 20 Q38 10 28 18" fill="none" stroke="#2f2a26" stroke-width="0.8"/><circle cx="28" cy="28" r="4" fill="none" stroke="#2f2a26" stroke-width="0.8"/></g>
+  <g transform="translate(860, 32)" opacity="0.5"><path d="M20 25 Q5 10 0 20 Q5 35 20 30Z" fill="none" stroke="#2f2a26" stroke-width="0.9"/><path d="M20 25 Q35 10 40 20 Q35 35 20 30Z" fill="none" stroke="#2f2a26" stroke-width="0.9"/><path d="M20 28 Q8 35 5 48 Q12 44 20 35Z" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M20 28 Q32 35 35 48 Q28 44 20 35Z" fill="none" stroke="#2f2a26" stroke-width="0.8"/><ellipse cx="20" cy="28" rx="2" ry="8" fill="#2f2a26" opacity="0.4"/><path d="M19 20 Q14 10 12 4" stroke="#2f2a26" stroke-width="0.7" fill="none"/><path d="M21 20 Q26 10 28 4" stroke="#2f2a26" stroke-width="0.7" fill="none"/><circle cx="12" cy="4" r="1.5" fill="#2f2a26" opacity="0.5"/><circle cx="28" cy="4" r="1.5" fill="#2f2a26" opacity="0.5"/></g>
+  <g transform="translate(24, 570)" opacity="0.45"><line x1="0" y1="12" x2="12" y2="12" stroke="#2f2a26" stroke-width="0.8"/><line x1="6" y1="6" x2="6" y2="18" stroke="#2f2a26" stroke-width="0.8"/><text x="16" y="16" font-family="'Cinzel', serif" font-size="11" fill="#2f2a26" letter-spacing="2">11:11</text><line x1="58" y1="12" x2="70" y2="12" stroke="#2f2a26" stroke-width="0.8"/><line x1="64" y1="6" x2="64" y2="18" stroke="#2f2a26" stroke-width="0.8"/></g>
+  <g transform="translate(876, 540)" opacity="0.5"><circle cx="28" cy="28" r="26" fill="none" stroke="#2f2a26" stroke-width="1"/><ellipse cx="28" cy="32" rx="9" ry="7" fill="#2f2a26" opacity="0.25"/><ellipse cx="16" cy="22" rx="4.5" ry="3.5" fill="#2f2a26" opacity="0.25"/><ellipse cx="24" cy="18" rx="4" ry="3.5" fill="#2f2a26" opacity="0.25"/><ellipse cx="32" cy="18" rx="4" ry="3.5" fill="#2f2a26" opacity="0.25"/><ellipse cx="40" cy="22" rx="4.5" ry="3.5" fill="#2f2a26" opacity="0.25"/></g>
+  <g transform="translate(42, 1090)" opacity="0.5"><ellipse cx="35" cy="28" rx="22" ry="16" fill="none" stroke="#2f2a26" stroke-width="1.1"/><ellipse cx="35" cy="28" rx="10" ry="8" fill="none" stroke="#2f2a26" stroke-width="0.7"/><path d="M25 20 Q35 14 45 20" fill="none" stroke="#2f2a26" stroke-width="0.6"/><path d="M22 28 Q35 22 48 28" fill="none" stroke="#2f2a26" stroke-width="0.6"/><path d="M25 36 Q35 42 45 36" fill="none" stroke="#2f2a26" stroke-width="0.6"/><ellipse cx="57" cy="24" rx="7" ry="5" fill="none" stroke="#2f2a26" stroke-width="1"/><circle cx="60" cy="22" r="1" fill="#2f2a26" opacity="0.5"/><path d="M22 18 Q12 12 8 8" stroke="#2f2a26" stroke-width="0.9" fill="none"/><path d="M48 18 Q56 10 60 8" stroke="#2f2a26" stroke-width="0.9" fill="none"/><path d="M20 36 Q10 44 6 48" stroke="#2f2a26" stroke-width="0.9" fill="none"/><path d="M50 36 Q58 44 62 48" stroke="#2f2a26" stroke-width="0.9" fill="none"/><path d="M15 28 Q4 28 0 32" stroke="#2f2a26" stroke-width="0.9" fill="none"/></g>
+  <g transform="translate(848, 1060)" opacity="0.55"><path d="M40 130 Q38 100 42 70 Q40 40 38 16" stroke="#2f2a26" stroke-width="1.2" fill="none"/><path d="M40 90 Q54 82 58 70 Q50 78 40 82" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M40 80 Q26 72 22 60 Q30 68 40 72" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M38 16 Q20 -2 28 -18 Q38 -26 46 -18 Q54 -2 38 16Z" fill="none" stroke="#2f2a26" stroke-width="1.1"/><path d="M38 16 Q16 8 18 -12 Q26 -20 38 -10" fill="none" stroke="#2f2a26" stroke-width="0.8"/><path d="M38 16 Q60 8 58 -12 Q50 -20 38 -10" fill="none" stroke="#2f2a26" stroke-width="0.8"/><circle cx="38" cy="0" r="5" fill="none" stroke="#2f2a26" stroke-width="0.9"/><path d="M28 118 Q28 112 34 112 Q38 112 38 116 Q38 112 42 112 Q48 112 48 118 Q48 124 38 130 Q28 124 28 118Z" fill="none" stroke="#2f2a26" stroke-width="0.9"/></g>
+</svg>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-main">Black Poppy Magik</span>
+      <span class="nav-logo-sub">& Apothecary</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#readings">Readings</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-eleven">11:11</span>
+      <a href="https://black-poppy-magik.myshopify.com/collections/readings" class="nav-cart">Order</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hd" id="home">
+    <span class="hd-super">Sacred Chaos · Black Poppy Magik & Apothecary</span>
+    <h1 class="hd-title">Black Poppy Magik</h1>
+    <div class="hd-title2">& Apothecary</div>
+    <span class="hd-sub">Noli illegitimi carborundum</span>
+    <p class="hd-tagline">Ancestral craft. Animal soul readings. Blood & Bloom apothecary.<br>Digital grimoires. Vintage finds with teeth.<br>Everything rooted in one witch's first memory — her mother's garden.</p>
+    <div class="hd-rule"><span>✿</span></div>
+    <div class="hero-ctas">
+      <a href="#readings" class="btn-primary">Order a Reading</a>
+      <a href="#shop" class="btn-ghost">Explore the Shop</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="card" id="about" style="display:block;">
+    <div class="ch">
+      <span class="ch-step">The Architect</span>
+      <div class="ch-title">Rachael Nike</div>
+      <div class="ch-desc">Turtle Oracle · Star Pawz · Blood & Bloom</div>
+    </div>
+    <div class="about-layout">
+      <div>
+        <div class="about-portrait">
+          <!-- REPLACE src="YOUR_PHOTO_URL" with your headshot hosted on GitHub -->
+          <div class="about-portrait-placeholder">🌿<br><br>Upload your headshot to GitHub and replace this placeholder</div>
+        </div>
+        <p class="about-caption">Rachael Nike · Black Poppy Architect · Est. 1624</p>
+      </div>
+      <div>
+        <blockquote class="about-origin">"My first memory is my mother's garden — roses and California poppies."</blockquote>
+        <div class="about-body">
+          <p>The Turtle Oracle · Kindred Soul Charts was born one week after I lost my 230-pound black brindle English Mastiff, Turtle — my MS service animal, my anchor, the steadiest soul I have ever known. He stayed for nearly 12 years. He outlived his breed by four of them. Through losing Trent, my Tervuren. Through losing my mother Misha. Through every dark night that needed holding.</p>
+          <p>In the raw middle of that grief, this work arrived — the need to understand not just who he was, but why he chose me. What the stars were doing the day he came. What every lean of that massive body against my legs actually meant.</p>
+          <p>Turtle gave me this work. Trent watches over it. Alice Moon carries it forward.</p>
+          <p>Every chart is cast from actual planetary data — positions, elements, moon phase at birth — and interpreted through an ancestral framework I created to honor the bond between animals and their humans. Every chart is as unique as the soul it's cast for. Delivered as a sacred PDF within 48 hours.</p>
+        </div>
+        <div class="about-sig">
+          <div class="about-sig-name">Rachael Nike</div>
+          <div class="about-sig-title">Ancestral witch · Herbalist · Reader<br>Turtle Oracle · Star Pawz · Blood & Bloom<br>Black Poppy Magik & Apothecary · Sacred Chaos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <!-- READINGS -->
+  <div class="card" id="readings" style="display:block;">
+    <div class="ch">
+      <span class="ch-step">Turtle Oracle · Star Pawz</span>
+      <div class="ch-title">Animal Soul Readings</div>
+      <div class="ch-desc">This space is for the quirks, the love languages, and the 2:00 AM questions. The more you share, the deeper your reading goes. There are no wrong answers.</div>
+    </div>
+    <div class="readings-grid">
+      <a class="rcard" href="https://black-poppy-magik.myshopify.com/collections/readings">
+        <span class="rcard-price">$35</span>
+        <span class="rcard-name">Solo Animal Chart</span>
+        <span class="rcard-desc">One animal · full natal chart · soul purpose + elemental archetype + complete interpretation</span>
+        <span class="rcard-cta">Order this reading →</span>
+      </a>
+      <a class="rcard" href="https://black-poppy-magik.myshopify.com/collections/readings">
+        <span class="rcard-price">$55</span>
+        <span class="rcard-name">Kindred Bond</span>
+        <span class="rcard-desc">One animal + one human · both natal charts · the soul contract between you</span>
+        <span class="rcard-cta">Order this reading →</span>
+      </a>
+      <a class="rcard" href="https://black-poppy-magik.myshopify.com/collections/readings">
+        <span class="rcard-price">$45</span>
+        <span class="rcard-name">Memorial Reading</span>
+        <span class="rcard-desc">A soul who has crossed · natal chart included · held with full tenderness</span>
+        <span class="rcard-cta">Order this reading →</span>
+      </a>
+      <a class="rcard seasonal" href="https://black-poppy-magik.myshopify.com/collections/readings">
+        <span class="rcard-badge">✦ Mother's Day · Limited</span>
+        <span class="rcard-price">$45</span>
+        <span class="rcard-name">Mother's Bond</span>
+        <span class="rcard-desc">Mother and offspring · two charts, one sacred reading</span>
+        <span class="rcard-cta">Order this reading →</span>
+      </a>
+      <a class="rcard" href="https://black-poppy-magik.myshopify.com/collections/readings">
+        <span class="rcard-price">$75</span>
+        <span class="rcard-name">Family Constellation</span>
+        <span class="rcard-desc">Multiple souls · individual charts · how they shape each other</span>
+        <span class="rcard-cta">Order this reading →</span>
+      </a>
+      <a class="rcard" href="https://black-poppy-magik.myshopify.com/collections/readings">
+        <span class="rcard-price">$15</span>
+        <span class="rcard-name">Ask the Stars</span>
+        <span class="rcard-desc">Your question through today's transits mapped to your chart</span>
+        <span class="rcard-cta">Ask now →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <!-- SHOP CATEGORIES -->
+  <div class="card" id="shop" style="display:block;">
+    <div class="ch">
+      <span class="ch-step">The Shop</span>
+      <div class="ch-title">Everything in the Empire</div>
+      <div class="ch-desc">Readings, apothecary, digital grimoires, vintage, prints — all rooted in the same lineage.</div>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="#readings">
+        <span class="cat-icon">🐾</span>
+        <span class="cat-name">Readings</span>
+        <span class="cat-desc">Order now</span>
+      </a>
+      <a class="cat-card dimmed" href="#shop">
+        <span class="cat-icon">🌿</span>
+        <span class="cat-name">Apothecary</span>
+        <span class="cat-desc">Restocking soon</span>
+      </a>
+      <a class="cat-card dimmed" href="#shop">
+        <span class="cat-icon">📖</span>
+        <span class="cat-name">Grimoire</span>
+        <span class="cat-desc">Restocking soon</span>
+      </a>
+      <a class="cat-card dimmed" href="#shop">
+        <span class="cat-icon">🖤</span>
+        <span class="cat-name">Vintage</span>
+        <span class="cat-desc">Restocking soon</span>
+      </a>
+      <a class="cat-card dimmed" href="#shop">
+        <span class="cat-icon">✦</span>
+        <span class="cat-name">Prints</span>
+        <span class="cat-desc">Restocking soon</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="card" style="display:block;">
+    <div class="trust-grid">
+      <div><span class="trust-icon">🖤</span><span class="trust-label">Handcrafted</span><p class="trust-desc">Every reading by hand, by Rachael.</p></div>
+      <div><span class="trust-icon">🌿</span><span class="trust-label">Lineage</span><p class="trust-desc">Third-gen witch. Rooted since 1624.</p></div>
+      <div><span class="trust-icon">✉️</span><span class="trust-label">48 Hours</span><p class="trust-desc">Sacred PDF by email.</p></div>
+      <div><span class="trust-icon">🔒</span><span class="trust-label">Sacred</span><p class="trust-desc">Your info never shared.</p></div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <!-- CONTACT -->
+  <div class="card" id="contact" style="display:block;">
+    <div class="ch">
+      <span class="ch-step">Ask Rachael</span>
+      <div class="ch-title">Have a Question?</div>
+      <div class="ch-desc">Not sure which reading is right? Send me a message — I read every one personally.</div>
+    </div>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-fields">
+      <input type="text" name="name" class="contact-input" placeholder="Your name" required>
+      <input type="email" name="email" class="contact-input" placeholder="Your email" required>
+      <input type="text" name="subject" class="contact-input" placeholder="Subject — e.g. Question about Kindred Bond">
+      <textarea name="message" class="contact-textarea" placeholder="Your question or message..." rows="5" required></textarea>
+      <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Send Message</button>
+    </form>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="card" style="display:block;">
+    <div class="ch">
+      <span class="ch-step">Black Poppy Continuum</span>
+      <div class="ch-title">Join the Continuum</div>
+      <div class="ch-desc">New moon dispatches, grimoire drops, seasonal readings. No noise. Only signal.</div>
+    </div>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="your.email@somewhere.com">
+      <button class="newsletter-btn">Subscribe</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Turtle Oracle</span><span class="marquee-dot">✦</span><span class="marquee-item">Blood & Bloom</span><span class="marquee-dot">✦</span><span class="marquee-item">Star Pawz</span><span class="marquee-dot">✦</span><span class="marquee-item">Daily Grimoire</span><span class="marquee-dot">✦</span><span class="marquee-item">Funky Black Poppy</span><span class="marquee-dot">✦</span><span class="marquee-item">Animal Soul Charts</span><span class="marquee-dot">✦</span><span class="marquee-item">Ancestral Craft</span><span class="marquee-dot">✦</span><span class="marquee-item">Apothecary</span><span class="marquee-dot">✦</span><span class="marquee-item">Third-Gen Witch</span><span class="marquee-dot">✦</span><span class="marquee-item">Turtle Oracle</span><span class="marquee-dot">✦</span><span class="marquee-item">Blood & Bloom</span><span class="marquee-dot">✦</span><span class="marquee-item">Star Pawz</span><span class="marquee-dot">✦</span><span class="marquee-item">Daily Grimoire</span><span class="marquee-dot">✦</span><span class="marquee-item">Funky Black Poppy</span><span class="marquee-dot">✦</span><span class="marquee-item">Animal Soul Charts</span><span class="marquee-dot">✦</span><span class="marquee-item">Ancestral Craft</span><span class="marquee-dot">✦</span><span class="marquee-item">Apothecary</span><span class="marquee-dot">✦</span><span class="marquee-item">Third-Gen Witch</span><span class="marquee-dot">✦</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">Black Poppy Magik</span>
+        <span class="footer-brand-sub">& Apothecary · Sacred Chaos</span>
+        <p class="footer-desc">Ancestral craft rooted in an unbroken lineage. Everything here began with roses and California poppies.</p>
+        <span class="footer-tagline">Noli illegitimi carborundum</span>
+      </div>
+      <div>
+        <span class="footer-col-title">Readings</span>
+        <ul class="footer-links">
+          <li><a href="#readings">Solo Animal Chart</a></li>
+          <li><a href="#readings">Kindred Bond</a></li>
+          <li><a href="#readings">Memorial Reading</a></li>
+          <li><a href="#readings">Family Constellation</a></li>
+          <li><a href="#readings">Ask the Stars</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Connect</span>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/funkyblackpoppy" target="_blank">Instagram</a></li>
+          <li><a href="https://www.etsy.com/shop/blackpoppymagik" target="_blank">Etsy Shop</a></li>
+          <li><a href="https://funkyblackpoppy-art.github.io/turtle-oracle/" target="_blank">Intake Form</a></li>
+          <li><a href="#about">About Rachael Nike</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Black Poppy Magik & Apothecary · By Rachael Nike</span>
+      <span class="footer-eleven">11:11</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
